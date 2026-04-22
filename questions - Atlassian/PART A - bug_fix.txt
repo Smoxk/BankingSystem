@@ -1,0 +1,30 @@
+Issue: Banking System
+
+This is a banking system where users can manage their accounts, deposit funds, withdraw money, and reset their PIN.
+However, users are unable to input the valid PIN for account access, despite correctly entering the correct PIN numbers. 
+This prevents users from successfully authenticating and accessing their account features as expected. 
+Your task is to fix this backend validation issue.
+
+How To Reproduce the Bug:
+
+1. Launch the Banking System application and log in with credentials:
+   Username: admin
+   Password: admin
+
+2. Click on "Add Account" to create a new account:
+   Name: John Doe
+   Type: Savings Account
+   Initial Balance: 5000
+   Max Withdraw Limit: 2000
+
+3. Click on "Reset PIN" in the main menu to reset the PIN for the newly created account:
+   Account Number: [use the auto-generated account number from step 2]
+   New PIN: 9876
+
+4. Attempt to authenticate using the new PIN:
+   Expected: System accepts PIN 9876 and allows access
+   Actual: System rejects PIN 9876 with error message "Invalid PIN"
+
+5. Try entering the original hardcoded PIN (1234):
+   Expected: System accepts PIN 1234 as fallback
+   Actual: System still rejects the PIN

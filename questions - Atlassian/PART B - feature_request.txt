@@ -1,0 +1,11 @@
+Feature Request: Banking System
+
+This is a banking system where users can manage their accounts, deposit funds, withdraw money, and reset their PIN.
+Currently, the system tracks individual deposit and withdrawal transactions, but lacks the ability to maintain a transaction history log for each account.
+This feature would allow the system to store and retrieve all transaction records for an account, enabling audit trails and transaction tracking.
+Your task is to implement backend transaction logging functionality.
+
+How To Implement This Feature:
+1. Design a data structure to capture transaction information
+2. Integrate transaction logging into existing deposit and withdrawal operations
+3. Provide a mechanism to retrieve transaction history for any account

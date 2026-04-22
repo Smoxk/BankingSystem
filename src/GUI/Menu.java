@@ -102,6 +102,22 @@ public class Menu extends JFrame {
 		btnWithdrawFromAccount.setBounds(217, 256, 194, 33);
 		contentPane.add(btnWithdrawFromAccount);
 		
+		JButton btnResetPin = new JButton("Reset PIN");
+		btnResetPin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(!GUIForm.resetpin.isVisible())
+				{
+					GUIForm.resetpin.setVisible(true);
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(getComponent(0), "Already Opened", "Warning", 0);
+				}
+			}
+		});
+		btnResetPin.setBounds(217, 299, 194, 33);
+		contentPane.add(btnResetPin);
+		
 		JButton btnDisplayAccountList = new JButton("Display Account List");
 		btnDisplayAccountList.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -117,7 +133,7 @@ public class Menu extends JFrame {
 				
 			}
 		});
-		btnDisplayAccountList.setBounds(217, 300, 194, 32);
+		btnDisplayAccountList.setBounds(217, 342, 194, 32);
 		contentPane.add(btnDisplayAccountList);
 		
 		JButton btnExit = new JButton("Exit");
@@ -128,7 +144,7 @@ public class Menu extends JFrame {
 				System.exit(0);
 			}
 		});
-		btnExit.setBounds(217, 343, 194, 33);
+		btnExit.setBounds(217, 385, 194, 33);
 		contentPane.add(btnExit);
 		
 		JButton btnNewButton = new JButton("Add Account");

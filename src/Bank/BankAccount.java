@@ -14,6 +14,7 @@ public class BankAccount implements Serializable {
 	private double balance;
 	private double min_balance;
 	private String acc_num;
+	private int pin;
 	//String type;
 	
 	
@@ -25,6 +26,7 @@ public class BankAccount implements Serializable {
     this.balance = balance;
     this.min_balance = min_balance;
     this.acc_num = 10000 + (int) (Math.random() * 89999) + "";
+    this.pin = 1234;
 }
 
 
@@ -59,4 +61,28 @@ public class BankAccount implements Serializable {
 	public String toString() {
 		return "Name: " + name + ", Id: " + acc_num + ", Balance: " + balance +"Type:"+this.getClass();
 	}
-}
+	
+	/**
+	 * Validate PIN
+	 * @param inputPin - PIN to validate
+	 * @return true if PIN is correct, false otherwise
+	 */
+	public boolean validatePin(int inputPin) {
+		return this.pin == inputPin;
+	}
+	
+	/**
+	 * Reset PIN to a new value
+	 * @param newPin - the new PIN value
+	 */
+	public void resetPin(int newPin) {
+		this.pin = newPin;
+	}
+	
+	/**
+	 * Get current PIN
+	 * @return the current PIN
+	 */
+	public int getPin() {
+		return this.pin;
+	}

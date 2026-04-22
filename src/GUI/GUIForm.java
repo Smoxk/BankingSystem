@@ -12,6 +12,7 @@ public class GUIForm {
 	public static DisplayList displaylist= new DisplayList();
 	public static DepositAcc depositacc= new DepositAcc();
 	public static WithdrawAcc withdraw = new WithdrawAcc();
+	public static ResetPin resetpin = new ResetPin();
 	
 	public static void UpdateDisplay()
 	{
